@@ -152,6 +152,8 @@ def serializeBlockInfo(ba):
     writeVarUInt(0, ba) # 0
     ba.extend([0] * 4) # bucket_num
 
+def assertPacket(packet, expected):
+    assert(packet == expected), packet
 
 def sendEmptyBlock(s):
     ba = bytearray()
